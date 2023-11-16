@@ -1,42 +1,30 @@
-# My Project Title
-
-by Suraj Rampure (rampure@ucsd.edu)
-
-***Note***: If you choose a repo name and title as uninspired as the ones here, I will be quite sad.
-
----
+# An Investigation on the Power Outages Over Years
 
 ## Introduction
 
-In this project, we studied the effectiveness of spice challenges in building team morale.
+In both industrial production and daily life, electricity is frequently used every day. Consequently, power outages can have a significant impact on people. By analyzing power outage data, we can better guide how to enhance electricity usage quality, analyze potential causes of outages, and develop corresponding improvement measures.
 
----
+The dataset is sourced from `https://engineering.purdue.edu/LASCI/research-data/outages` and contains power outages data since 2000, with 1534 rows.
 
-## Cleaning and EDA
+The dataset has as many as 56 columns totally. But we only select a few columns related to our investigation, which are shown below:
 
-<iframe src="assets/10-80-enrollment.html" width=800 height=600 frameBorder=0></iframe>
+| Column              | Description                    |
+| ------------------- | ------------------------------ |
+| `OUTAGE.START.DATE` | The date when an outage occurs |
+| `OUTAGE.START.TIME` | The time when an outage occurs |
+| `OUTAGE.DURATION`   | The minutes an outage lasts    |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
 
----
+## Data Cleaning and EDA
 
-## Assessment of Missingness
+### Data Cleaning
 
-Here's what a Markdown table looks like. Note that the code for this table was generated _automatically_ from a DataFrame, using
+#### Combine Data Column and Time Column
 
-```py
-print(counts[['Quarter', 'Count']].head().to_markdown(index=False))
-```
+It's not convenience if a specific datetime is described by two columns, so first we combine the `OUTAGE.START.DATE` column and the `OUTAGE.START.TIME` column into a single `OUTAGE.START` column with the `pd.Timestamp` type.
 
-| Quarter     |   Count |
-|:------------|--------:|
-| Fall 2020   |       3 |
-| Winter 2021 |       2 |
-| Spring 2021 |       6 |
-| Summer 2021 |       4 |
-| Fall 2021   |      55 |
-
----
-
-## Hypothesis Testing
-
-
----
